@@ -71,13 +71,13 @@ section
 		span
 			color: #ffffff
 
-	input, textarea
+/* 	input, textarea
 		border: #666 1px solid
 		outline: none
 		&:focus:required:invalid
 			border-color: red
 		&:required:valid
-			border-color: green
+			border-color: green */
 
 .img-responsive
 	display: block
@@ -409,6 +409,19 @@ $colors: $blue, $red, $accent
 		p
 			margin: 30px 0
 			fz18
+	&-call
+		&.inverse
+			background-color: #ffffff
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: 25%
+		&::before
+			content: ''
+			width: 50%
+			right: 0
+			height: 100%
+			position: absolute
+			background-color: rgba($accent, .92)
 
 .section-overlay
 	&::before
@@ -453,7 +466,112 @@ $colors: $blue, $red, $accent
 				position: absolute
 				left: 15px
 				content: '\f104'
+
+input, textarea, select, .selectize-control .selectize-input, 
+.selectize-control.single .selectize-input.input-active
+	background-color: transparent
+	border: rgba(#000, .1) 1px solid
+	border-bottom: rgba(#000, .1) 2px solid
+	border-radius: 2px
+	padding: 8px 22px
+	outline: none
+	display: inline-block
+	font-size: 16px
+	color: #333333
+
+select
+	padding: 10px 22px
+
+.selectize-control .selectize-input
+	box-shadow: none
+	overflow: inherit
+	line-height: inherit
+	text-align: left
+	input
+		font-size: 16px
+	&.dropdown-active
+		&::before
+			background-color: transparent
+	
+.selectize-control.single
+	.selectize-input, &.dropdown-active
+		&::after
+			border: none
+			font-family: fontawesome
+			content: '\f107'
+			position: absolute
+			right: 30px
+			top: 12px
+		&.dropdown-active
+			&::after
+				content: '\f106'
+	.selectize-dropdown
+		font-size: 15px
+		border: none
+		border-radius: 0
+		text-align: left
+		&-content
+			.option
+				padding: 10px 22px
+				&.active
+					background-color: lighten($accent, 15%)
+
+.success
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	text-transform: uppercase
+	font-weight: bold
+	display: none
+	z-index: 10
+	span
+		margin: auto
+	& ~ *
+		transition: all .5s ease
+	&.active
+		& ~ *
+			opacity: .5
+			filter: blur(10px)
+
+
+.callback
+	padding: 20% 0
+	position: relative
+	
+	&-logo
+		img
+			width: 100px
+			height: auto
+
+	.formhead
+		margin: 0
+		font-size: 30px
+		color: #ffffff
+	p
+		margin-top: 0
+	input, textarea, select,
+	.selectize-control .selectize-input, 
+	.selectize-control.single .selectize-input.input-active
+		color: #ffffff
+		width: 100%
+		margin-top: 17px
+
+		&::-webkit-input-placeholder
+			color: #ffffff
+			opacity: 1
+		&::-moz-placeholder
+			color: #ffffff
+			opacity: 1
+		&::-ms-input-placeholder
+			color: #ffffff
 		
+		option
+			color: #333333
+	.button
+		margin-top: 40px
+
 
 
 

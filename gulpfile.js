@@ -15,7 +15,7 @@ var gulp          = require('gulp'),
 		notify        = require("gulp-notify"),
 		rsync         = require('gulp-rsync');
 
-gulp.task('browser-sync', function() {
+/* gulp.task('browser-sync', function() {
 	browsersync({
 		server: {
 			baseDir: 'app'
@@ -25,6 +25,15 @@ gulp.task('browser-sync', function() {
 		// tunnel: true,
 		// tunnel: "projectname", //Demonstration page: http://projectname.localtunnel.me
 	})
+}); */
+
+gulp.task('browser-sync', function() {
+	browsersync.init({
+		proxy: "optimized.loc",
+        port: '8008',
+        open: false,
+				notify: false
+	});
 });
 
 gulp.task('styles', function() {
@@ -44,6 +53,7 @@ gulp.task('js', function() {
 		'app/libs/owl-carousel/dist/owl.carousel.min.js',
 		'app/libs/equalHeights/equalheights.js',
 		'app/libs/fotorama/fotorama.js',
+		'app/libs/selectize/js/standalone/selectize.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

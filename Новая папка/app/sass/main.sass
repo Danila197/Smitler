@@ -1,0 +1,41 @@
+@import "part"
+
+.cls
+	background-color: #eee
+
+section
+	border: #000 15px solid
+
+#id
+	background-color: red
+	p
+		background-color: tomato
+
+header, p 
+		border-bottom: #000 2px solid
+
+ul li span
+	display: block
+	color: blue
+
+ul li > span
+	color: blue
+
+.table
+	color: #353535
+	span
+		display: block
+		min-width: 200px
+		height: 50px
+		margin: 10px 100px
+		padding: 10px 5px
+		text-align: center
+		border: 1px solid tomato
+		font-size: 18px
+		font-weight: bold
+		line-height: 50px
+		&:nth-child(2n)
+			background-color: red
+			color: #ffffff
+
+		
