@@ -1,0 +1,30 @@
+{
+  "name": "Vitaly",
+  "description": "SMilter",
+  "main": "index.js",
+  "authors": [
+    "WebDesign Master"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "css-hamburgers": "^0.9.3",
+    "selectize": "^0.12.5",
+    "fotorama": "^4.6.4",
+    "jquery-mmenu": "^4.0.3",
+    "jQuery.mmenu": "~7.0.6",
+    "jquery": "^3.3.1"
+  },
+  "resolutions": {
+    "jQuery.mmenu": "~7.0.6"
+  }
+}
