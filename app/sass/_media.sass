@@ -36,7 +36,20 @@
 			text-align: left
 	.button
 			padding: 12px 36px
-
+	.quotes
+		&::before, &::after
+			display: none
+	.partners
+		.owl-nav
+			> div
+				&.owl-prev
+					left: 0
+				&.owl-next
+					right: 0
+	.s-partners
+		.h2
+			margin: 0
+	
 // ≥576px
 +media-breakpoint-down(xs)
 	.welcome
@@ -51,7 +64,7 @@
 	.header-composition 
 		p
 			font-size: 14px
-	
+
 
 @media only screen and (max-width : 480px)
 	.welcome
